@@ -17,11 +17,21 @@
 
 // 基本的な使用方法
 
-console.log(typeof 42); // "number"
-console.log(typeof 'hello'); // "string"
-console.log(typeof true); // "boolean"
-console.log(typeof undefined); // "undefined"
-console.log(typeof null); // "object" なぜかnullは"object"と表示される
-console.log(typeof {}); // "object"
-console.log(typeof []); // "object"
-console.log(typeof function () {}); // "function"
+// console.log(typeof 42); // "number"
+// console.log(typeof 'hello'); // "string"
+// console.log(typeof true); // "boolean"
+// console.log(typeof undefined); // "undefined"
+// console.log(typeof null); // "object" なぜかnullは"object"と表示される
+// console.log(typeof {}); // "object"
+// console.log(typeof []); // "object"
+// console.log(typeof function () {}); // "function"
+
+// 注意点
+// nullは"object"と表示される
+
+console.log(typeof null); // "object"
+
+// 厳密に確認する場合は、nullかどうかを判定する必要がある
+
+let value = null;
+console.log(value === null); // true
