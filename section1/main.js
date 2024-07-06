@@ -46,16 +46,29 @@
 
 // 実践的な型のチェック
 
-function processValue(value) {
-  if (typeof value === 'number') {
-    return value * 2;
-  } else if (typeof value === 'string') {
-    return value.toUpperCase();
-  } else {
-    return 'Unsupported type';
+// function processValue(value) {
+//   if (typeof value === 'number') {
+//     return value * 2;
+//   } else if (typeof value === 'string') {
+//     return value.toUpperCase();
+//   } else {
+//     return 'Unsupported type';
+//   }
+// }
+
+// console.log(processValue(5)); // 10
+// console.log(processValue('hello')); // "HELLO"
+// console.log(processValue(true)); // "Unsupported type"
+
+// 未定義のチェック
+
+function safeDivide(a, b) {
+  if (typeof b === 'undefined' || b === 0) {
+    return 'Cannot divide by zero or undefined';
   }
+  return a / b;
 }
 
-console.log(processValue(5)); // 10
-console.log(processValue('hello')); // "HELLO"
-console.log(processValue(true)); // "Unsupported type"
+console.log(safeDivide(10, 2)); // 5
+console.log(safeDivide(10, 0)); // "Cannot divide by zero or undefined"
+console.log(safeDivide(10)); // "Cannot divide by zero or undefined"
