@@ -40,6 +40,22 @@
 
 // 配列は、typeof演算子でデータ型を確認すると"object"と表示される
 
-let arr = [1, 2, 3];
-console.log(typeof arr); // "object"
-console.log(Array.isArray(arr)); // true
+// let arr = [1, 2, 3];
+// console.log(typeof arr); // "object"
+// console.log(Array.isArray(arr)); // true
+
+// 実践的な型のチェック
+
+function processValue(value) {
+  if (typeof value === 'number') {
+    return value * 2;
+  } else if (typeof value === 'string') {
+    return value.toUpperCase();
+  } else {
+    return 'Unsupported type';
+  }
+}
+
+console.log(processValue(5)); // 10
+console.log(processValue('hello')); // "HELLO"
+console.log(processValue(true)); // "Unsupported type"
