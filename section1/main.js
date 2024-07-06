@@ -26,12 +26,20 @@
 // console.log(typeof []); // "object"
 // console.log(typeof function () {}); // "function"
 
-// 注意点
-// nullは"object"と表示される
+// // 注意点
+// // nullは"object"と表示される
 
-console.log(typeof null); // "object"
+// console.log(typeof null); // "object"
 
-// 厳密に確認する場合は、nullかどうかを判定する必要がある
+// // 厳密に確認する場合は、nullかどうかを判定する必要がある
 
-let value = null;
-console.log(value === null); // true
+// let value = null;
+// console.log(value === null); // true
+
+// 配列の扱い
+
+// 配列は、typeof演算子でデータ型を確認すると"object"と表示される
+
+let arr = [1, 2, 3];
+console.log(typeof arr); // "object"
+console.log(Array.isArray(arr)); // true
