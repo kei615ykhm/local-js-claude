@@ -70,3 +70,8 @@ console.log(evenNumbers); // [2, 4, 6, 8, 10]
 
 const squaredNumbers = numbers.map((num) => num * num);
 console.log(squaredNumbers); // [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+// 配列の要素の合計を計算する
+
+const sum = numbers.reduce((acc, cur) => acc + cur, 0);
+console.log(sum); // 55
