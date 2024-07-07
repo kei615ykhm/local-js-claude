@@ -98,16 +98,26 @@
 
 // オブジェクトの処理
 
-const people = [
-  { name: '佐藤', age: 30 },
-  { name: '鈴木', age: 25 },
-  { name: '高橋', age: 35 },
-];
+// const people = [
+//   { name: '佐藤', age: 30 },
+//   { name: '鈴木', age: 25 },
+//   { name: '高橋', age: 35 },
+// ];
 
-// 名前のリストを作成
-const names = people.map((person) => person.name);
-console.log(names); // 出力: ['佐藤', '鈴木', '高橋']
+// // 名前のリストを作成
+// const names = people.map((person) => person.name);
+// console.log(names); // 出力: ['佐藤', '鈴木', '高橋']
 
-// 30歳以上の人をフィルタリング
-const over30 = people.filter((person) => person.age >= 30);
-console.log(over30); // 出力: [{ name: '佐藤', age: 30 }, { name: '高橋', age: 35 }]
+// // 30歳以上の人をフィルタリング
+// const over30 = people.filter((person) => person.age >= 30);
+// console.log(over30); // 出力: [{ name: '佐藤', age: 30 }, { name: '高橋', age: 35 }]
+
+// 高階関数との組み合わせ
+
+const multiply = (factor) => (number) => number * factor;
+
+const double = multiply(2);
+const triple = multiply(3);
+
+console.log(double(5)); // 出力: 10
+console.log(triple(5)); // 出力: 15
