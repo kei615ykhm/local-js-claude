@@ -34,16 +34,42 @@
 //   },
 // };
 
-const obj = {
-  name: 'Alice',
-  greet: function () {
-    setTimeout(() => {
-      console.log(`Hello, ${this.name}`);
-    }, 1000);
-  },
-};
+// const obj = {
+//   name: 'Alice',
+//   greet: function () {
+//     setTimeout(() => {
+//       console.log(`Hello, ${this.name}`);
+//     }, 1000);
+//   },
+// };
 
 // 通常の関数と違い、アロー関数はargumentsObjectを持たない
 // コンストラクタとして使用することはできない
 // yieldを使用することはできない
 // アロー関数は関数式でしか使用できない
+
+// 使用例
+
+// 配列メソッドとの組み合わせ
+
+const numbers = [1, 2, 3, 4, 5];
+const squared = numbers.map((x) => x * x);
+
+// オブジェクトメソッドの短縮記法
+
+const person = {
+  name: 'Bob',
+  sayHello: () => console.log(`Hello, I'm ${this.name}`), // 注意: this は期待通りに動作しません
+};
+
+// 簡単な計算
+
+// 従来の関数
+function add(a, b) {
+  return a + b;
+}
+
+// アロー関数
+const addArrow = (a, b) => a + b;
+
+console.log(addArrow(5, 3)); // 出力: 8
