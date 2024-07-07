@@ -37,23 +37,31 @@
 
 // 配列の繰り返し処理
 
-// for文を使った繰り返し処理
+// // for文を使った繰り返し処理
 
-for (let i = 0; i < fruits.length; i++) {
-  console.log(fruits[i]);
-}
+// for (let i = 0; i < fruits.length; i++) {
+//   console.log(fruits[i]);
+// }
 
-// forEachメソッドを使った繰り返し処理
+// // forEachメソッドを使った繰り返し処理
 
-fruits.forEach(function (fruit) {
-  console.log(fruit);
-});
+// fruits.forEach(function (fruit) {
+//   console.log(fruit);
+// });
 
-// アロー関数を使用した簡潔な書き方
-fruits.forEach((fruit) => console.log(fruit));
+// // アロー関数を使用した簡潔な書き方
+// fruits.forEach((fruit) => console.log(fruit));
 
-// for...of文を使った繰り返し処理(ES6以降)
+// // for...of文を使った繰り返し処理(ES6以降)
 
-for (const fruit of fruits) {
-  console.log(fruit);
-}
+// for (const fruit of fruits) {
+//   console.log(fruit);
+// }
+
+// 実践的な使用例
+
+// 配列の要素をフィルタリングする
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const evenNumbers = numbers.filter((num) => num % 2 === 0);
+console.log(evenNumbers); // [2, 4, 6, 8, 10]
