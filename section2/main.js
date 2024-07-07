@@ -52,15 +52,15 @@
 
 // 配列メソッドとの組み合わせ
 
-const numbers = [1, 2, 3, 4, 5];
-const squared = numbers.map((x) => x * x);
+// const numbers = [1, 2, 3, 4, 5];
+// const squared = numbers.map((x) => x * x);
 
-// オブジェクトメソッドの短縮記法
+// // オブジェクトメソッドの短縮記法
 
-const person = {
-  name: 'Bob',
-  sayHello: () => console.log(`Hello, I'm ${this.name}`), // 注意: this は期待通りに動作しません
-};
+// const person = {
+//   name: 'Bob',
+//   sayHello: () => console.log(`Hello, I'm ${this.name}`), // 注意: this は期待通りに動作しません
+// };
 
 // 簡単な計算
 
@@ -76,6 +76,22 @@ const person = {
 
 // 文字列の操作
 
-const greet = (name) => `こんにちは、${name}さん！`;
+// const greet = (name) => `こんにちは、${name}さん！`;
 
-console.log(greet('田中')); // 出力: こんにちは、田中さん！
+// console.log(greet('田中')); // 出力: こんにちは、田中さん！
+
+// 配列の操作
+
+const numbers = [1, 2, 3, 4, 5];
+
+// 各数字を2倍にする
+const doubled = numbers.map((num) => num * 2);
+console.log(doubled); // 出力: [2, 4, 6, 8, 10]
+
+// 偶数のみをフィルタリング
+const evens = numbers.filter((num) => num % 2 === 0);
+console.log(evens); // 出力: [2, 4]
+
+// 合計を計算
+const sum = numbers.reduce((total, num) => total + num, 0);
+console.log(sum); // 出力: 15
