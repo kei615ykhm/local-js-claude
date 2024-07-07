@@ -65,3 +65,8 @@
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const evenNumbers = numbers.filter((num) => num % 2 === 0);
 console.log(evenNumbers); // [2, 4, 6, 8, 10]
+
+// 配列の要素を変換する
+
+const squaredNumbers = numbers.map((num) => num * num);
+console.log(squaredNumbers); // [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
