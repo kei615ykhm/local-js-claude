@@ -64,12 +64,18 @@ const person = {
 
 // 簡単な計算
 
-// 従来の関数
-function add(a, b) {
-  return a + b;
-}
+// // 従来の関数
+// function add(a, b) {
+//   return a + b;
+// }
 
-// アロー関数
-const addArrow = (a, b) => a + b;
+// // アロー関数
+// const addArrow = (a, b) => a + b;
 
-console.log(addArrow(5, 3)); // 出力: 8
+// console.log(addArrow(5, 3)); // 出力: 8
+
+// 文字列の操作
+
+const greet = (name) => `こんにちは、${name}さん！`;
+
+console.log(greet('田中')); // 出力: こんにちは、田中さん！
