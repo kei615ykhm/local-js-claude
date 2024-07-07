@@ -82,16 +82,32 @@
 
 // 配列の操作
 
-const numbers = [1, 2, 3, 4, 5];
+// const numbers = [1, 2, 3, 4, 5];
 
-// 各数字を2倍にする
-const doubled = numbers.map((num) => num * 2);
-console.log(doubled); // 出力: [2, 4, 6, 8, 10]
+// // 各数字を2倍にする
+// const doubled = numbers.map((num) => num * 2);
+// console.log(doubled); // 出力: [2, 4, 6, 8, 10]
 
-// 偶数のみをフィルタリング
-const evens = numbers.filter((num) => num % 2 === 0);
-console.log(evens); // 出力: [2, 4]
+// // 偶数のみをフィルタリング
+// const evens = numbers.filter((num) => num % 2 === 0);
+// console.log(evens); // 出力: [2, 4]
 
-// 合計を計算
-const sum = numbers.reduce((total, num) => total + num, 0);
-console.log(sum); // 出力: 15
+// // 合計を計算
+// const sum = numbers.reduce((total, num) => total + num, 0);
+// console.log(sum); // 出力: 15
+
+// オブジェクトの処理
+
+const people = [
+  { name: '佐藤', age: 30 },
+  { name: '鈴木', age: 25 },
+  { name: '高橋', age: 35 },
+];
+
+// 名前のリストを作成
+const names = people.map((person) => person.name);
+console.log(names); // 出力: ['佐藤', '鈴木', '高橋']
+
+// 30歳以上の人をフィルタリング
+const over30 = people.filter((person) => person.age >= 30);
+console.log(over30); // 出力: [{ name: '佐藤', age: 30 }, { name: '高橋', age: 35 }]
