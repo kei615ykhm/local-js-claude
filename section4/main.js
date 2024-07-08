@@ -19,3 +19,7 @@ console.log(person['age']); // 30
 
 // プロパティの変更
 person.age = 31;
+
+// 新しいプロパティの追加
+
+person.job = 'エンジニア';
