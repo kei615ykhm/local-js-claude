@@ -27,3 +27,20 @@ person.job = 'エンジニア';
 // プロパティの削除
 
 // delete person.city;
+
+// プロパティとメソッド
+
+// プロパティとは特性を表す値のこと
+// メソッドとはオブジェクトに属する関数のこと
+
+let car = {
+  brand: 'Toyota',
+  model: 'Corolla',
+  year: 2021,
+  start: function () {
+    console.log('エンジンを始動します');
+  },
+};
+
+console.log(car.brand); // "Toyota"
+car.start(); // "エンジンを始動します"
