@@ -146,3 +146,69 @@ console.log(javascriptArticles);
 //   { id: 1, title: "JavaScriptの基礎", tags: ["プログラミング", "JavaScript", "入門"] },
 //   { id: 2, title: "Reactの使い方", tags: ["プログラミング", "JavaScript", "React", "フレームワーク"] }
 // ]
+
+// 詳細検索の実用例
+
+let users = [
+  {
+    id: 1,
+    name: '田中太郎',
+    age: 28,
+    skills: ['JavaScript', 'Python'],
+    location: '東京',
+  },
+  {
+    id: 2,
+    name: '鈴木花子',
+    age: 35,
+    skills: ['Java', 'C++'],
+    location: '大阪',
+  },
+  {
+    id: 3,
+    name: '佐藤次郎',
+    age: 42,
+    skills: ['Python', 'Ruby'],
+    location: '東京',
+  },
+  {
+    id: 4,
+    name: '山田凛',
+    age: 23,
+    skills: ['JavaScript', 'React'],
+    location: '名古屋',
+  },
+];
+
+function advancedSearch(users, criteria) {
+  return users.filter((user) => {
+    for (let key in criteria) {
+      if (key === 'skills') {
+        // スキルは配列なので、一つでも一致すればOK
+        if (!criteria[key].some((skill) => user[key].includes(skill))) {
+          return false;
+        }
+      } else if (key === 'ageRange') {
+        // 年齢範囲のチェック
+        if (user.age < criteria[key].min || user.age > criteria[key].max) {
+          return false;
+        }
+      } else if (user[key] !== criteria[key]) {
+        return false;
+      }
+    }
+    return true;
+  });
+}
+
+let searchCriteria = {
+  skills: ['JavaScript'],
+  ageRange: { min: 20, max: 30 },
+  location: '東京',
+};
+
+let searchResults = advancedSearch(users, searchCriteria);
+console.log(searchResults);
+// 出力: [
+//   { id: 1, name: "田中太郎", age: 28, skills: ["JavaScript", "Python"], location: "東京" }
+// ]
