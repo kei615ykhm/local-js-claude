@@ -23,3 +23,7 @@ person.age = 31;
 // 新しいプロパティの追加
 
 person.job = 'エンジニア';
+
+// プロパティの削除
+
+// delete person.city;
