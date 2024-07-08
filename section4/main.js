@@ -100,3 +100,49 @@ for (let fruit in inventory) {
   }
 }
 console.log('In stock: ' + inStock.join(', '));
+
+// フィルタリングの実用例
+
+let articles = [
+  {
+    id: 1,
+    title: 'JavaScriptの基礎',
+    tags: ['プログラミング', 'JavaScript', '入門'],
+  },
+  {
+    id: 2,
+    title: 'Reactの使い方',
+    tags: ['プログラミング', 'JavaScript', 'React', 'フレームワーク'],
+  },
+  {
+    id: 3,
+    title: '効果的なSEO対策',
+    tags: ['マーケティング', 'SEO', 'Webサイト'],
+  },
+  {
+    id: 4,
+    title: 'モダンなCSS技法',
+    tags: ['プログラミング', 'CSS', 'Web開発'],
+  },
+];
+
+function filterArticlesByTag(articles, targetTag) {
+  let filteredArticles = [];
+  for (let i in articles) {
+    let article = articles[i];
+    for (let j in article.tags) {
+      if (article.tags[j].toLowerCase() === targetTag.toLowerCase()) {
+        filteredArticles.push(article);
+        break; // 一致するタグが見つかったらこの記事のループを抜ける
+      }
+    }
+  }
+  return filteredArticles;
+}
+
+let javascriptArticles = filterArticlesByTag(articles, 'JavaScript');
+console.log(javascriptArticles);
+// 出力: [
+//   { id: 1, title: "JavaScriptの基礎", tags: ["プログラミング", "JavaScript", "入門"] },
+//   { id: 2, title: "Reactの使い方", tags: ["プログラミング", "JavaScript", "React", "フレームワーク"] }
+// ]
