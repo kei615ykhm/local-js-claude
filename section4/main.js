@@ -56,3 +56,11 @@ for (let key in person) {
 // age: 31
 // city: 東京
 // job: エンジニア
+
+// for...inの繰り返しループの詳細説明
+
+// 基本構文
+
+for (let key in object) {
+  // オブジェクトのプロパティに対する処理
+}
