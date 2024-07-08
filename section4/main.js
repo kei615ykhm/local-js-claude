@@ -44,3 +44,15 @@ let car = {
 
 console.log(car.brand); // "Toyota"
 car.start(); // "エンジンを始動します"
+
+// オブジェクトの繰り返し処理（for...in）
+
+for (let key in person) {
+  console.log(key + ': ' + person[key]);
+}
+
+// 出力結果
+// name: 太郎
+// age: 31
+// city: 東京
+// job: エンジニア
