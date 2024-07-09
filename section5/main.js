@@ -49,3 +49,29 @@ class Dog extends Animal {
 
 let dog = new Dog('Buddy');
 dog.speak(); // 出力: "Buddy barks."
+
+// 配列とクラスの違い
+
+// 配列の例：学生のリスト
+
+let students = ['山田', '田中', '佐藤', '鈴木'];
+console.log(students[0]); // 出力: "山田"
+
+// クラスの例：学生の詳細情報を含むリスト
+
+class Student {
+  constructor(name, age, grade) {
+    this.name = name;
+    this.age = age;
+    this.grade = grade;
+  }
+
+  introduce() {
+    console.log(
+      `私は${this.name}です。${this.age}歳で、${this.grade}年生です。`
+    );
+  }
+}
+
+let yamada = new Student('山田', 15, 2);
+yamada.introduce(); // 出力: "私は山田です。15歳で、2年生です。"
