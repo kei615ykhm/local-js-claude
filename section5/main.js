@@ -139,3 +139,84 @@ class Curry {
     return `${this.type}カレー（${this.calories}kcal）: ${this.spiceLevel}、具材は${this.mainIngredients.join(', ')}です。`;
   }
 }
+
+// カプセル化：個人情報の管理
+
+// カプセル化を使って、個人情報を保護する
+
+class UserProfile {
+  constructor(name, email, dateOfBirth, socialSecurityNumber) {
+    this._name = name;
+    this._email = email;
+    this._dateOfBirth = dateOfBirth;
+    this._socialSecurityNumber = socialSecurityNumber;
+    this._lastLoginDate = null;
+  }
+
+  // 公開メソッド：名前を取得
+  getName() {
+    return this._name;
+  }
+
+  // 公開メソッド：メールアドレスを取得
+  getEmail() {
+    return this._email;
+  }
+
+  // 公開メソッド：年齢を計算して返す
+  getAge() {
+    const today = new Date();
+    const birthDate = new Date(this._dateOfBirth);
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+    if (
+      monthDiff < 0 ||
+      (monthDiff === 0 && today.getDate() < birthDate.getDate())
+    ) {
+      age--;
+    }
+    return age;
+  }
+
+  // 公開メソッド：ログイン日時を更新
+  updateLastLogin() {
+    this._lastLoginDate = new Date();
+  }
+
+  // 公開メソッド：最終ログイン日時を取得
+  getLastLoginDate() {
+    return this._lastLoginDate
+      ? this._lastLoginDate.toLocaleString()
+      : 'まだログインしていません';
+  }
+
+  // 非公開メソッド：社会保障番号の一部を隠す
+  #maskSSN() {
+    return 'xxx-xx-' + this._socialSecurityNumber.slice(-4);
+  }
+
+  // 公開メソッド：マスクされた社会保障番号を取得
+  getMaskedSSN() {
+    return this.#maskSSN();
+  }
+}
+
+// UserProfileクラスの使用例
+const user = new UserProfile(
+  '山田太郎',
+  'yamada@example.com',
+  '1990-05-15',
+  '123-45-6789'
+);
+
+console.log(user.getName()); // 出力: 山田太郎
+console.log(user.getEmail()); // 出力: yamada@example.com
+console.log(user.getAge()); // 出力: 33（2023年現在）
+console.log(user.getMaskedSSN()); // 出力: xxx-xx-6789
+
+user.updateLastLogin();
+console.log(user.getLastLoginDate()); // 出力: 現在の日時
+
+// 以下はエラーになる（直接アクセス不可）
+// console.log(user._socialSecurityNumber);
+// console.log(user.#maskSSN());
