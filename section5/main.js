@@ -124,3 +124,18 @@ let spicyCurry = new Curry('スパイシーチキン', '激辛', ['鶏肉', '唐
 console.log(beefCurry.describe());
 console.log(veggieCurry.describe());
 console.log(spicyCurry.describe());
+
+// 変更する例
+
+// クラスの定義を変更して、たとえば全てのカレーにカロリーを追加してみる。
+
+class Curry {
+  constructor(type, spiceLevel, mainIngredients, calories) {
+    // ... 既存のコード ...
+    this.calories = calories;
+  }
+
+  describe() {
+    return `${this.type}カレー（${this.calories}kcal）: ${this.spiceLevel}、具材は${this.mainIngredients.join(', ')}です。`;
+  }
+}
