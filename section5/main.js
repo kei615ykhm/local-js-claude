@@ -75,3 +75,25 @@ class Student {
 
 let yamada = new Student('山田', 15, 2);
 yamada.introduce(); // 出力: "私は山田です。15歳で、2年生です。"
+
+// コンストラクタの基本的な使い方
+
+class House {
+  constructor(rooms, color) {
+    this.rooms = rooms;
+    this.color = color;
+    this.isLocked = false; // デフォルト値の設定
+  }
+
+  lock() {
+    this.isLocked = true;
+    console.log('家をロックしました。');
+  }
+}
+
+// コンストラクタを使ってオブジェクトを作成
+let myHouse = new House(3, '白');
+console.log(myHouse.rooms); // 出力: 3
+console.log(myHouse.color); // 出力: "白"
+
+myHouse.lock(); // 出力: "家をロックしました。"
