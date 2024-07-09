@@ -97,3 +97,30 @@ console.log(myHouse.rooms); // 出力: 3
 console.log(myHouse.color); // 出力: "白"
 
 myHouse.lock(); // 出力: "家をロックしました。"
+
+// バリデーションの追加
+
+class Curry {
+  constructor(type, spiceLevel, mainIngredients) {
+    this.type = type;
+    this.spiceLevel = spiceLevel;
+    this.mainIngredients = mainIngredients;
+  }
+
+  describe() {
+    return `これは${this.spiceLevel}の${this.type}カレーです。主な具材は${this.mainIngredients.join(', ')}です。`;
+  }
+}
+
+// 様々なカレーを作成
+let beefCurry = new Curry('ビーフ', '中辛', ['牛肉', '玉ねぎ']);
+let veggieCurry = new Curry('夏野菜', '甘口', [
+  'ナス',
+  'ズッキーニ',
+  'パプリカ',
+]);
+let spicyCurry = new Curry('スパイシーチキン', '激辛', ['鶏肉', '唐辛子']);
+
+console.log(beefCurry.describe());
+console.log(veggieCurry.describe());
+console.log(spicyCurry.describe());
