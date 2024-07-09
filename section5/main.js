@@ -28,3 +28,24 @@ class Person {
 let person1 = new Person('Alice', 30);
 console.log(person1.name); // 出力: "Alice"
 console.log(person1.age); // 出力: 30
+
+// 継承の基本
+
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    console.log(`${this.name} makes a sound.`);
+  }
+}
+
+class Dog extends Animal {
+  speak() {
+    console.log(`${this.name} barks.`);
+  }
+}
+
+let dog = new Dog('Buddy');
+dog.speak(); // 出力: "Buddy barks."
