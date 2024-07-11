@@ -12,18 +12,32 @@
 
 // オブジェクト型とそのリテラル
 
-// 配列リテラル
+// // 配列リテラル
+// const arr1 = [1, 2, 3];
+// const arr2 = new Array(1, 2, 3);
+// arr1; // [1, 2, 3]
+
+// // オブジェクトリテラル
+// const obj1 = { key: 'value' };
+// const obj2 = new Object();
+// obj2.key = 'value';
+// obj1; // { key: 'value' }
+
+// // 正規表現リテラル
+// const reg1 = /pattern/;
+// const reg2 = new RegExp('pattern');
+// reg1; // /pattern/
+
+// 具体的な実例
+
 const arr1 = [1, 2, 3];
 const arr2 = new Array(1, 2, 3);
-arr1; // [1, 2, 3]
+console.log(arr1, arr2); // [1, 2, 3] [1, 2, 3]
 
-// オブジェクトリテラル
-const obj1 = { key: 'value' };
+const obj1 = {};
 const obj2 = new Object();
-obj2.key = 'value';
-obj1; // { key: 'value' }
+console.log(obj1, obj2); // {} {}
 
-// 正規表現リテラル
-const reg1 = /pattern/;
-const reg2 = new RegExp('pattern');
-reg1; // /pattern/
+const regex1 = /pattern/;
+const regex2 = new RegExp('pattern', 'i');
+console.log(regex1, regex2); // /pattern/ /pattern/i
