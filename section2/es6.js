@@ -84,3 +84,16 @@ const foo = {
 foo.baz(); // I am `baz` method
 
 // foo オブジェクトの baz プロパティは、メソッドとして定義されている
+
+// 簡略化したメソッドの定義
+
+const fuu = {
+  bar: 'bar',
+  baz() {
+    console.log('I am `baz` method');
+  },
+};
+
+fuu.baz(); // I am `baz` method
+
+// 結果は同じになる
