@@ -156,3 +156,31 @@ const jupiter = () => {
 };
 
 console.log(jupiter.name); // jupiter
+
+// 引数の表現のバリエーション
+
+// // デフォルト引数
+const raise = (n, m = 2) => n ** m;
+
+console.log(raise(2, 3)); // 8(2 ** 3)
+console.log(raise(3)); // 9 (3 ** 2)
+
+// // レストパラメータ
+
+const showNames = (a, b, ...rest) => {
+  console.log(a);
+  console.log(b);
+  console.log(rest);
+};
+
+showNames('Moon', 'Mercury', 'Mars', 'Jupiter', 'Venus');
+// Moon
+// Mercury
+// [ 'Mars', 'Jupiter', 'Venus' ]
+
+// // レストパラメータに任意の名前を付けて取得したい場合
+
+const sum = (i, ...[j, k, l]) => i + j + k + l;
+
+console.log(sum(1, 2, 3, 4)); // 10
+console.log(sum(1, 1, 1, 1, 1, 1)); // 4
