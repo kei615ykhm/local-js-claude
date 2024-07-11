@@ -30,14 +30,25 @@
 
 // 具体的な実例
 
-const arr1 = [1, 2, 3];
-const arr2 = new Array(1, 2, 3);
-console.log(arr1, arr2); // [1, 2, 3] [1, 2, 3]
+// const arr1 = [1, 2, 3];
+// const arr2 = new Array(1, 2, 3);
+// console.log(arr1, arr2); // [1, 2, 3] [1, 2, 3]
 
-const obj1 = {};
-const obj2 = new Object();
-console.log(obj1, obj2); // {} {}
+// const obj1 = {};
+// const obj2 = new Object();
+// console.log(obj1, obj2); // {} {}
 
-const regex1 = /pattern/;
-const regex2 = new RegExp('pattern', 'i');
-console.log(regex1, regex2); // /pattern/ /pattern/i
+// const regex1 = /pattern/;
+// const regex2 = new RegExp('pattern', 'i');
+// console.log(regex1, regex2); // /pattern/ /pattern/i
+
+// 狭義のオブジェクトと広義のオブジェクト
+
+// // 狭義のオブジェクト
+// const obj1 = {};
+// // 広義のオブジェクト
+// const obj2 = new Object();
+
+// オブジェクトとは通常、キーとそれに対応する値を保持するデータ構造のことを指す（連想配列）
+
+// 狭義のオブジェクトは、多くの場合JSON形式のオブジェクトを指す
