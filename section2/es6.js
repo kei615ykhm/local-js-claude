@@ -118,3 +118,8 @@ const increment = (n) => n + 1;
 console.log(plusOne(4)); // 5
 console.log(addOne(4)); // 5
 console.log(increment(4)); // 5
+
+// 引数が一つの場合は括弧を省略でき、処理が一つの場合は return キーワードをブロックごと省略できる
+
+// ただし、Pettierでは、引数が一つの場合でも以下のように書いても括弧をつけるようになっている
+// const increment = n => n + 1;
