@@ -71,3 +71,16 @@ const add = function (n, m) {
 
 // 関数は第一級オブジェクトだが、任意のオブジェクトのプロパティになることもできる
 // 単にオブジェクトのプロパティになってる関数をメソッドと呼ぶ
+
+// メソッドとは、オブジェクトに紐づいた関数のこと
+
+const foo = {
+  bar: 'bar',
+  baz: function () {
+    console.log('I am `baz` method');
+  },
+};
+
+foo.baz(); // I am `baz` method
+
+// foo オブジェクトの baz プロパティは、メソッドとして定義されている
