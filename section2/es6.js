@@ -24,3 +24,7 @@ function double(n) {
 const dbl = function (n) {
   return n * 2;
 };
+
+// double と dbl は同じ関数を指す
+// 式の場合はセミコロンをつけるが、宣言文はつけない
+// また、関数宣言文は巻き上げが起こるが、関数式は起こらない
