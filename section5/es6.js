@@ -90,3 +90,12 @@ class Bird {
 
 // constructorでコンストラクタの明示的な定義ができるようになった
 // constructor(name) { の部分
+
+// 継承の簡略化
+
+// ES6の継承
+class FlyableBird extends Bird {
+  fly() {
+    console.log(`${this.name}が飛びました`);
+  }
+}
