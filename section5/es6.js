@@ -63,3 +63,30 @@ hawk.cry('ピィィー'); // タカが「ピィィー」と鳴きました
 
 // // メソッドを呼び出す
 hawk.fly(); // タカが飛びました
+
+// es6は何が変わったのか？
+
+// classキーワードで直感的なクラス定義ができるようになった
+
+// ES5
+function Bird(name) {
+  this.name = name;
+}
+
+Bird.prototype.cry = function (sound) {
+  console.log(this.name + 'が「' + sound + '」と鳴きました');
+};
+
+// ES6
+class Bird {
+  constructor(name) {
+    this.name = name;
+  }
+
+  cry(sound) {
+    console.log(`${this.name}が「${sound}」と鳴きました`);
+  }
+}
+
+// constructorでコンストラクタの明示的な定義ができるようになった
+// constructor(name) { の部分
