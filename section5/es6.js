@@ -107,3 +107,13 @@ class FlyableBird extends Bird {
     super(name); // 親クラスのコンストラクタを呼び出す
   }
 }
+
+// staticクラスを使って静的メソッドを定義できるようになった
+
+class Bird {
+  static explain() {
+    console.log('これは鳥のクラスです');
+  }
+}
+
+Bird.explain(); // これは鳥のクラスです
