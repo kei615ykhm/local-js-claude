@@ -117,3 +117,13 @@ class Bird {
 }
 
 Bird.explain(); // これは鳥のクラスです
+
+// #プライベートフィールドを使って、クラス内でのみアクセスできるフィールドを定義できるようになった
+
+class Bird {
+  #className = '鳥類';
+
+  introduce() {
+    console.log(`私は${this.#className}の${this.name}です`);
+  }
+}
