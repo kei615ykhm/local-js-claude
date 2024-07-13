@@ -72,3 +72,13 @@ const moreFruits = ['オレンジ', ...fruits, 'ぶどう'];
 console.log(moreFruits); // ['オレンジ', 'りんご', 'バナナ', 'ぶどう']
 
 // 説明：...fruitsが''りんご', 'バナナ'に展開される。その結果、'オレンジ'と'ぶどう'が新しい配列の中に個別の要素として追加される。
+
+// // オブジェクトのスプレッド構文
+
+const basicInfo = { name: 'ケイ', age: 28 };
+const fullInfo = { ...basicInfo, job: 'エンジニア', hobby: 'ゲーム' };
+
+console.log(fullInfo);
+// { name: 'ケイ', age: 28, job: 'エンジニア', hobby: 'ゲーム' }
+
+// 説明：...basicInfoが{name: 'ケイ', age: 28}に展開される。その結果、jobとhobbyが新しいオブジェクトの中に追加される。
