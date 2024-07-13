@@ -99,3 +99,11 @@ class FlyableBird extends Bird {
     console.log(`${this.name}が飛びました`);
   }
 }
+
+// superキーワードで親クラスのコンストラクタを呼び出せるようになった
+
+class FlyableBird extends Bird {
+  constructor(name) {
+    super(name); // 親クラスのコンストラクタを呼び出す
+  }
+}
