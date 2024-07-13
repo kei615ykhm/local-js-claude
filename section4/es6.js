@@ -61,3 +61,14 @@ const colors = ['赤', '青', '緑'];
 const [red, blue, green] = colors;
 console.log(red); // "赤"
 console.log(blue); // "青"
+
+// // スプレッド構文の簡単な例
+
+// // 配列のスプレッド構文
+
+const fruits = ['りんご', 'バナナ'];
+const moreFruits = ['オレンジ', ...fruits, 'ぶどう'];
+
+console.log(moreFruits); // ['オレンジ', 'りんご', 'バナナ', 'ぶどう']
+
+// 説明：...fruitsが''りんご', 'バナナ'に展開される。その結果、'オレンジ'と'ぶどう'が新しい配列の中に個別の要素として追加される。
