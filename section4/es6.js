@@ -45,3 +45,13 @@
 // const profile = { name: 'Kanae', age: 24, gender: 'f' };
 // const { name, age } = profile;
 // console.log(name, age); // Kanae 24
+
+// // より簡単で基本的な例
+
+// オブジェクトの分割代入
+const person = { name: 'ケイ', age: 28 };
+const { name: personName, age } = person;
+console.log(personName); // "ケイ"
+console.log(age); // 28
+
+// 注意：console.log(name);にするとreference errorが発生する（理由は、グローバルのnameと衝突する可能性があるため）
