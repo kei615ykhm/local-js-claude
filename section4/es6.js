@@ -55,3 +55,9 @@ console.log(personName); // "ケイ"
 console.log(age); // 28
 
 // 注意：console.log(name);にするとreference errorが発生する（理由は、グローバルのnameと衝突する可能性があるため）
+
+// 配列の分割代入
+const colors = ['赤', '青', '緑'];
+const [red, blue, green] = colors;
+console.log(red); // "赤"
+console.log(blue); // "青"
