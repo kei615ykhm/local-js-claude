@@ -1,11 +1,22 @@
 {
   "devDependencies": {
+    "@markuplint/html-spec": "^4.8.0",
     "eslint": "^9.6.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
-    "prettier": "^3.3.2"
+    "markuplint": "^4.9.2",
+    "prettier": "^3.3.3",
+    "stylelint": "^16.7.0",
+    "stylelint-config-standard": "^36.0.0"
   },
   "scripts": {
-    "format": "prettier --write \"**/*.{js,css,html}\""
+    "format": "prettier --write \"**/*.{js,css,html}\"",
+    "lint:js": "eslint .",
+    "lint:css": "stylelint \"**/*.css\"",
+    "lint:html": "markuplint \"**/*.html\"",
+    "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
+    "fix:css": "stylelint \"**/*.css\" --fix",
+    "fix:html": "markuplint \"**/*.html\" --fix",
+    "fix": "npm run format && npm run fix:css && npm run fix:html"
   }
 }
