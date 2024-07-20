@@ -184,3 +184,18 @@
 
 // console.log(sum(1, 2, 3, 4)); // 10
 // console.log(sum(1, 1, 1, 1, 1, 1)); // 4
+
+// クロージャ
+
+function outerFunction(x) {
+  let outerVar = x;
+
+  function innerFunction(y) {
+    return outerVar + y; // outerVarにアクセス可能
+  }
+
+  return innerFunction;
+}
+
+const closure = outerFunction(10);
+console.log(closure(5)); // 出力: 15
