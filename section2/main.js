@@ -114,10 +114,10 @@
 
 // 高階関数との組み合わせ
 
-const multiply = (factor) => (number) => number * factor;
+// const multiply = (factor) => (number) => number * factor;
 
-const double = multiply(2);
-const triple = multiply(3);
+// const double = multiply(2);
+// const triple = multiply(3);
 
-console.log(double(5)); // 出力: 10
-console.log(triple(5)); // 出力: 15
+// console.log(double(5)); // 出力: 10
+// console.log(triple(5)); // 出力: 15
