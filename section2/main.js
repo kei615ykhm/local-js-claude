@@ -131,3 +131,9 @@ function greeet(name) {
 }
 
 console.log(greeet('山田')); // 出力: こんにちは、山田さん！
+
+// アロー関数
+
+const greetArrow = (name) => `こんにちは、${name}さん！`;
+
+console.log(greetArrow('山田')); // 出力: こんにちは、山田さん！
