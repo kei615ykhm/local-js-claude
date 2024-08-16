@@ -121,3 +121,13 @@
 
 // console.log(double(5)); // 出力: 10
 // console.log(triple(5)); // 出力: 15
+
+// 関数の復習
+
+// 基本的な関数
+
+function greeet(name) {
+  return `こんにちは、${name}さん！`;
+}
+
+console.log(greeet('山田')); // 出力: こんにちは、山田さん！
